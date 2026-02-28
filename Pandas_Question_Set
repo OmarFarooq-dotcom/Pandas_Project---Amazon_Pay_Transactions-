@@ -1,0 +1,73 @@
+Pandas Question Set (Complete Coverage)
+
+1.1 DataFrame Basics + Exploration
+
+	a. Print df.shape, df.columns, df.dtypes
+	b. Show df.head() and df.tail()
+	c. Use df.describe() for numeric summary
+	d. Find missing values per column using df.isnull().sum()
+
+1.2 Filtering + Selection
+	
+	a. Filter all SUCCESS transactions
+	b. Filter transactions where amount > 1000
+	c. Filter Bangalore + UPI transactions
+	d. Filter all rows where status != SUCCESS
+
+1.3 Sorting
+
+	a. Sort by amount descending
+	b. Sort by txn_date ascending and amount descending
+
+1.4 Aggregation + GroupBy
+
+	a. Total SUCCESS revenue
+	b. Revenue by payment_method
+	c. Count of transactions by status
+	d. Average processing time by bank
+	e. Top 3 cities by total SUCCESS revenue
+
+1.5 Pivot Table (Must for BA)
+	a. Create pivot: index=city, columns=status, values=amount, aggfunc=sum
+
+1.6 String Operations
+
+	a. Convert city to uppercase
+	b. Extract first character of bank name
+	c. Check transactions where merchant_category contains 'Elect'
+
+1.7 Datetime Operations
+	
+	a. Extract year, month, day from txn_date
+	b. Filter last 7 days based on max date
+	c. Group revenue by day (date-wise)
+
+1.8 Merge + Join Practice
+
+	Table_2: customers
+
+							customers = pd.DataFrame({
+							"customer_id": ["C001","C002","C003","C004","C005","C006"],
+							"customer_name": ["Aman","Sara","Neha","Raju","Faiz","Zoya"],
+							"age": [24, 27, 23, 29, 26, 25]
+							})
+
+	a. Merge df with customers on customer_id
+	b. Find rows where customer_name is missing after merge (unmatched customers)
+
+1.9 Missing Data
+	
+	a. Fill missing processing_time_sec with median
+	b. Drop rows where status is missing
+
+1.10 Window / Ranking in Pandas
+
+	a. For each city, rank transactions by amount descending
+	b. Get top 2 transactions per city (include ties using dense ranking)
+
+1.11 Rolling / Expanding
+
+a. Rolling mean of amount per customer (window=3)
+b. Cumulative sum of amount per customer
+
+-------------------END------------------
